@@ -1,0 +1,20 @@
+// ==UserScript==
+// @name         Facebook block SuggestedPost
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://www.facebook.com/
+// @grant        none
+// @require https://code.jquery.com/jquery-3.1.1.slim.min.js
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    
+    $( window ).scroll(function() {
+        $("._5g-l").parent().parent().parent().parent().parent().remove();
+    });
+
+    // Your code here...
+})();
