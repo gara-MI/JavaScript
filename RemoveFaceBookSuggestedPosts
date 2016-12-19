@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Facebook block SuggestedPost
+// @name         Remvoe Facebook SuggestedPosts/Sponsered Posts
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
@@ -11,10 +11,7 @@
 
 (function() {
     'use strict';
-    
     $( window ).scroll(function() {
-        $("._5g-l").parent().parent().parent().parent().parent().remove();
+        $(".uiStreamSponsoredLink").closest("._4ikz").remove();
     });
-
-    // Your code here...
 })();
