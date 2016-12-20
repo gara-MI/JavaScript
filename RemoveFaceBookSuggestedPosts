@@ -12,7 +12,10 @@
 //TamperMonkey script to remove Remvoe Facebook Suggested/Sponsered Posts.
 (function() {
     'use strict';
-    $( window ).scroll(function() {
+    $(document).ready(function() {
+        $( window ).scroll(function() {
+            $(".uiStreamSponsoredLink").closest("._4ikz").remove();
+        });
         $(".uiStreamSponsoredLink").closest("._4ikz").remove();
     });
 })();
